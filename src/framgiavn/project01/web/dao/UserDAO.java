@@ -6,4 +6,5 @@ public interface UserDAO {
 	public User findByUserId(Integer user_id) throws Exception;
 
 	public User findByUsername(String username) throws Exception;
+	public User CheckLogin(String username, String password) throws Exception;
 }

@@ -40,9 +40,9 @@
 		<property name="mappingResources">
 			<list>
 				<value>framgiavn/project01/web/model/User.hbm.xml</value>
+				<value>framgiavn/project01/web/model/Lesson.hbm.xml</value>
 			</list>
 		</property>
-
 	</bean>
 
 	<!-- Transaction manager for a single Hibernate SessionFactory -->

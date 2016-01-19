@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//WebContent/layout/footer.jsp=UTF-8
+encoding//WebContent/login/loginsuccess.jsp=UTF-8
+encoding//WebContent/task/lesson.jsp=UTF-8
+encoding//src/framgiavn/project01/web/dao/impl/LessonDAOImpl.java=UTF-8

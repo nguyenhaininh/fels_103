@@ -12,7 +12,6 @@
 			<result-type name="tiles"
 				class="org.apache.struts2.views.tiles.TilesResult" default="true" />
 		</result-types>
-
 		<global-results>
 			<!-- Define Exception Forward -->
 			<result name="sys_exception">Default.SystemException</result>
@@ -28,7 +27,20 @@
 		<action name="" class="springUserAction" method="homePage">
 			<result>HomePage</result>
 		</action>
-
+		<action name="login">
+			<result>login.jsp</result>
+		</action>
+		<action name="loginprocess" class="com.javapoint.Login">
+			<result name="success">loginseccess.jsp</result>
+			<result name="success">loginerror.jsp</result>
+		</action>
+		<action name="logout" class="com.javapoint.Login" method="logout">
+			<result name="success">logoutsuccess.jsp</result>
+		</action>
+		<action name="profile" class="com.javatpoint.Profile">
+			<result name="success">profilesuccess.jsp</result>
+			<result name="error">profileerror.jsp</result>
+		</action>
 	</package>
 
 	<!-- ===== Include Web Module Configuration ===== -->

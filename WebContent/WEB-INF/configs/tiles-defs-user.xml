@@ -12,4 +12,30 @@
 		<put-list-attribute name="css">
 		</put-list-attribute>
 	</definition>
+	
+	<definition name="User.Login" extends="Default.Web">
+		<put-attribute name="body" value="/login/loginsuccess.jsp" />
+		<put-list-attribute name="js">
+		</put-list-attribute>
+		<put-list-attribute name="css">
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="User.Login.Error" extends="Default.Web">
+		<put-attribute name="body" value="/login/loginerror.jsp" />
+		<put-list-attribute name="js">
+		</put-list-attribute>
+		<put-list-attribute name="css">
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="lesson" extends="Default.Web">
+		<put-attribute name="body" value="/task/lesson.jsp" />
+		<put-list-attribute name="js">
+		</put-list-attribute>
+		<put-list-attribute name="css">
+		</put-list-attribute>
+	</definition>
+	
+	
 </tiles-definitions>

@@ -40,5 +40,17 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public User CheckLogin(String email, String password) throws Exception{
+		try{
+			Query query = getSession().getNamedQuery("User.CheckLogin");
+			query.setParameter("email", email);
+			query.setParameter("password", password);
+			return (User)query.uniqueResult();
+		}catch(RuntimeException re){
+			log.error("Get failed login", re);
+			throw re;
+		}
+	}
 
 }

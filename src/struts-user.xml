@@ -19,5 +19,24 @@
 			<result name="success">User.Info</result>
 			<result name="error">User.Info</result>
 		</action>
+		<action name="signup" class="springLessonAction" method="checkSignup">
+			<result name="success">User.Info</result>
+			<result name="error">User.Info</result>
+		</action>
+		<action name="checkLogin" class="springUserAction" method="checkLogin">
+			<result name="success">User.Login</result>
+			<result name="error">HomePage</result>
+		</action>
+		<action name="logout" class="springLessonAction" method="logout">
+			<result name="success">HomePage</result>
+		</action>
+		<action name="searchWord" class="springUserAction" method="searchWord">
+			<result name="success">User.Login</result>
+			<result name="error">HomePage</result>
+		</action>
+		<action name="lesson" class="springLessonAction" method="showLesson">
+			<result name="success">lesson</result>
+			<result name="error">HomePage</result>
+		</action>
 	</package>
 </struts>

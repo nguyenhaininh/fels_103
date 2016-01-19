@@ -1,5 +1,7 @@
 package framgiavn.project01.web.business.impl;
 
+import java.io.PrintStream;
+
 import framgiavn.project01.web.business.UserBusiness;
 import framgiavn.project01.web.dao.UserDAO;
 import framgiavn.project01.web.model.User;
@@ -35,5 +37,15 @@ public class UserBusinessImpl implements UserBusiness {
 			throw e;
 		}
 	}
+	@Override
+	public User CheckLogin(String username, String password) throws Exception{
+		try{
+			return getUserDAO().CheckLogin(username, password);
+		}catch(Exception e){
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
 
 }

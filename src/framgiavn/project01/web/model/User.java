@@ -1,6 +1,7 @@
 package framgiavn.project01.web.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
 
@@ -13,10 +14,35 @@ public class User implements Serializable {
 	private String username;
 	private String password;
 	private String email;
-	private String avatar;
-
-	private boolean isAdmin;
-
+	private String image;
+	private String code;
+	private int point;
+	private Date create_at;
+	private Date update_at;
+	public Date getUpdate_at(){
+		return update_at;
+	}
+	public void setUpdate_at(Date date){
+		this.update_at=date;
+	}
+	public Date getCreate_at(){
+		return create_at;
+	}
+	public void setCreate_at(Date date){
+		this.create_at=date;
+	}
+	public int getPoint(){
+		return point;
+	}
+	public void setPoint(int point){
+		this.point = point;
+	}
+	public String getCode(){
+		return code;
+	}
+	public void setCode(String code){
+		this.code = code;
+	}
 	public int getUser_id() {
 		return user_id;
 	}
@@ -49,19 +75,11 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public String getAvatar() {
-		return avatar;
+	public String getImage() {
+		return image;
 	}
 
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-
-	public boolean getIsAdmin() {
-		return isAdmin;
-	}
-
-	public void setIsAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
+	public void setImage(String avatar) {
+		this.image = avatar;
 	}
 }
