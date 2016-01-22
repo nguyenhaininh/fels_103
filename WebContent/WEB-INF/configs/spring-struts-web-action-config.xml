@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- ================== USER MODULE ================== -->
+	<bean id="springUserAction" class="framgiavn.project01.web.action.UserAction"
+		scope="prototype">
+		<property name="userBusiness" ref="UserBusiness" />
+		<property name="lessonBusiness" ref="LessonBusiness" />
+	</bean>
+	<!-- ================== LESSON MODULE ================== -->
+	<bean id="springLessonAction" class="framgiavn.project01.web.action.TaskAction"
+		scope="prototype">
+		<property name="lessonBusiness" ref="LessonBusiness" />
+	</bean>
+
+</beans>

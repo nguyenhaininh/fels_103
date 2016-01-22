@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2016 3:58:51 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="framgiavn.project01.web.model.Lesson" table="lesson">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="create_at" type="java.util.Date">
+            <column name="create_at" />
+        </property>
+        <property name="update_at" type="java.util.Date">
+            <column name="update_at" />
+        </property>
+        <property name="code" type="java.lang.String">
+            <column name="code" />
+        </property>
+        <property name="level" type="int">
+            <column name="level" />
+        </property>
+        <property name="image" type="java.lang.String">
+            <column name="image" />
+        </property>
+        <property name="descript" type="java.lang.String">
+            <column name="descript" />
+        </property>
+    </class>
+</hibernate-mapping>
