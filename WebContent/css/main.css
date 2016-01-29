@@ -3537,4 +3537,12 @@ span.bets_odd {
 	background: #f9f9f9 !important;
 }
 
+.pass {
+	margin-right: 60px;
+}
+
+.password {
+	margin-top: 10px;
+	high: 10px;
+}
 

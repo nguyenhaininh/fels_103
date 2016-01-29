@@ -19,28 +19,28 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<a class="navbar-brand topnav" href="#"><img
-				class="img-responsive" src="/img/logo.png" alt=""></a>
+				class="img-responsive" src="img/logo.png" alt=""></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><i class="fa fa-home fa-fw"></i>Trang chủ</a></li>
+				<li><a href="<s:url value="/user/homepage"/>"><i class="fa fa-home fa-fw"></i>Trang chủ</a></li>
 				<li><a href="<s:url value="searchWord"/>">Tra từ</a></li>
 				<li><a href="user/lesson">Bài học</a></li>
 				<li><a href="#contact">Liên hệ</a></li>
 				<s:if test="%{#session.loginId==null}">
 					<!-- signup -->
-					<li><a href="<s:url value="/user/signup"/>"
-						class="dropdown-toggle" data-toggle="dropdown">Đăng ký<b
-							class="caret"></b>
+					<li><a href="<s:url value="#"/>" class="dropdown-toggle"
+						data-toggle="dropdown">Đăng ký<b class="caret"></b>
 					</a>
 						<ul class="dropdown-menu" style="padding: 15px; min-width: 250px;">
 							<li>
 								<div class="row">
 									<div class="col-md-12">
 										<form class="form" role="form" method="post"
-											action="user/signup" accept-charset="UTF-8" id="login-nav">
+											action="/user/signupProcess" accept-charset="UTF-8"
+											id="login-nav">
 											<div class="form-group">
 												<label class="sr-only" for="exampleInputEmail2">Email
 													address</label> <input name="user.email" type="email"
@@ -77,7 +77,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<s:form class="form" role="form" method="post"
-											action="user/checkLogin" accept-charset="UTF-8"
+											action="/user/checkLogin" accept-charset="UTF-8"
 											id="login-nav">
 											<div class="form-group">
 												<label class="sr-only" for="exampleInputEmail2">Email
@@ -111,9 +111,10 @@
 							<s:property value="%{#session.loginId}" />
 					</a>
 						<ul class="dropdown-menu" style="padding: 5px; min-width: 150px;">
-							<li><a href="user/logout" class="list-group-item">Đăng
-									xuất</a></li>
-							<li><a href="" class="list-group-item">Profile</a></li>
+							<li><a href="<s:url value="/user/logout"/>"
+								class="list-group-item">Đăng xuất</a></li>
+							<li><a href="<s:url value="/user/showProfile"/>"
+								class="list-group-item">Profile</a></li>
 						</ul></li>
 				</s:else>
 		</div>
@@ -156,88 +157,7 @@
 </div>
 <!-- /.intro-header -->
 <!-- Page Content -->
-<!-- Start lession -->
 
-<div class="content-section-a">
-
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-sm-6">
-					<hr class="section-heading-spacer">
-					<div class="clearfix"></div>
-					<h2 class="section-heading">Lesson 1: Tiếng Nhật không khó</h2>
-					<p class="lead">
-						Chỉ còn hơn 2 tháng nữa là các bạn đã bắt đầu một hành trình mới,
-						đầy gian nan thử thách và hứa hẹn rất nhiều thành công trong tương
-						lai. <a class="btn btn-default" href="#" role="button">Bắt đầu
-							ngay</a>
-					</p>
-				</div>
-				<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-					<img class="img-responsive" src="../img/japan.jpg" alt="">
-				</div>
-			</div>
-
-		</div>
-		<!-- /.container -->
-
-	</div>
-	<!-- /.content-section-a -->
-
-	<div class="content-section-b">
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-					<hr class="section-heading-spacer">
-					<div class="clearfix"></div>
-					<h2 class="section-heading">Lesson 2: Bắt đầu với Minnano
-						Nihongo</h2>
-					<p class="lead">
-						Chỉ còn hơn 2 tháng nữa là các bạn đã bắt đầu một hành trình mới,
-						đầy gian nan thử thách và hứa hẹn rất nhiều thành công trong tương
-						lai. <a class="btn btn-default" href="#" role="button">Bắt đầu
-							ngay</a>
-					</p>
-				</div>
-				<div class="col-lg-5 col-sm-pull-6  col-sm-6">
-					<img class="img-responsive" src="../img/minna-no.jpg" alt="">
-				</div>
-			</div>
-
-		</div>
-		<!-- /.container -->
-
-	</div>
-	<!-- /.content-section-b -->
-
-	<div class="content-section-a">
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-lg-5 col-sm-6">
-					<hr class="section-heading-spacer">
-					<div class="clearfix"></div>
-					<h2 class="section-heading">Lesson 3: Các lễ hội Nhật Bản</h2>
-					<p class="lead">
-						Chỉ còn hơn 2 tháng nữa là các bạn đã bắt đầu một hành trình mới,
-						đầy gian nan thử thách và hứa hẹn rất nhiều thành công trong tương
-						lai. <a class="btn btn-default" href="#" role="button">Bắt đầu
-							ngay</a>
-					</p>
-				</div>
-				<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-					<img class="img-responsive" src="../img/matsuri.jpg" alt="">
-				</div>
-			</div>
-
-		</div>
-		<!-- /.container -->
-
-	</div>
-	<!-- /.content-section-a -->
 
 <div class="content-section">
 

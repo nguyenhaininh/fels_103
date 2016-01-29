@@ -7,34 +7,44 @@
 
 	<definition name="User.Info" extends="Default.Web">
 		<put-attribute name="body" value="/user/user_info.jsp" />
-		<put-list-attribute name="js">
-		</put-list-attribute>
-		<put-list-attribute name="css">
-		</put-list-attribute>
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
 	</definition>
 	
-	<definition name="User.Login" extends="Default.Web">
-		<put-attribute name="body" value="/login/loginsuccess.jsp" />
-		<put-list-attribute name="js">
-		</put-list-attribute>
-		<put-list-attribute name="css">
-		</put-list-attribute>
+	<definition name="User.Profile" extends="Default.Web">
+		<put-attribute name="body" value="/user/profile/profile.jsp" />
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
 	</definition>
 	
 	<definition name="User.Login.Error" extends="Default.Web">
-		<put-attribute name="body" value="/login/loginerror.jsp" />
-		<put-list-attribute name="js">
-		</put-list-attribute>
-		<put-list-attribute name="css">
-		</put-list-attribute>
+		<put-attribute name="body" value="user/login/loginerror.jsp" />
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
+	</definition>
+	
+	<definition name="User.Signup" extends="Default.Web">
+		<put-attribute name="body" value="/user/signup/signup.jsp" />
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
 	</definition>
 	
 	<definition name="lesson" extends="Default.Web">
 		<put-attribute name="body" value="/task/lesson.jsp" />
-		<put-list-attribute name="js">
-		</put-list-attribute>
-		<put-list-attribute name="css">
-		</put-list-attribute>
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
+	</definition>
+	
+	<definition name="User.homepage" extends="Default.Web">
+		<put-attribute name="body" value="/index.jsp" />
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
+	</definition>
+	
+	<definition name="User.ChangePassword" extends="Default.Web">
+		<put-attribute name="body" value="/user/profile/changepassword.jsp" />
+		<put-list-attribute name="js"></put-list-attribute>
+		<put-list-attribute name="css"></put-list-attribute>
 	</definition>
 	
 	

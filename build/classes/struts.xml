@@ -25,7 +25,7 @@
 		</global-exception-mappings>
 
 		<action name="" class="springUserAction" method="homePage">
-			<result>HomePage</result>
+			<result >HomePage</result>
 		</action>
 		<action name="login">
 			<result>login.jsp</result>

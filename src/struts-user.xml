@@ -7,6 +7,7 @@
 
 	<!-- Configure NameSpace for action web -->
 	<package name="User" namespace="/user" extends="default-web">
+		
 		<action name="findByUserId*" class="springUserAction" method="findByUserId">
 			<param name="user.user_id">{1}</param>
 			<result name="success">User.Info</result>
@@ -19,14 +20,32 @@
 			<result name="success">User.Info</result>
 			<result name="error">User.Info</result>
 		</action>
-		<action name="signup" class="springLessonAction" method="checkSignup">
-			<result name="success">User.Info</result>
-			<result name="error">User.Info</result>
+		
+		<action name="signupProcess" class="springUserAction" method="signup">
+			<result name="success">User.HomePage</result>
+			<result name="error"></result>
 		</action>
+		
 		<action name="checkLogin" class="springUserAction" method="checkLogin">
-			<result name="success">User.Login</result>
+			<result name="success">User.Profile</result>
 			<result name="error">HomePage</result>
 		</action>
+		
+		<action name="showProfile" class="springUserAction" method="showProfile">
+			<result name="success">User.Profile</result>
+			<result name="error">HomePage</result>
+		</action>
+		
+		<action name="changePasswordForm" class="springUserAction">
+			<result>User.ChangePassword</result>
+		</action>
+
+		<action name="changePassword" class="springUserAction" method="changePassword">
+			<result name="success">HomePage</result>
+			<result name="error">User.ChangePassword</result>
+			<result name="none">HomePage</result>
+		</action>
+		
 		<action name="logout" class="springLessonAction" method="logout">
 			<result name="success">HomePage</result>
 		</action>
@@ -37,6 +56,11 @@
 		<action name="lesson" class="springLessonAction" method="showLesson">
 			<result name="success">lesson</result>
 			<result name="error">HomePage</result>
+		</action>
+		
+		<action name="homepage" class="springUserAction" method="homePage">
+			<result name="success">User.homepage</result>
+			
 		</action>
 	</package>
 </struts>

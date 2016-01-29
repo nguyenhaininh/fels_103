@@ -47,8 +47,6 @@ public class TaskAction extends ActionSupport implements SessionAware {
 	public String logout() {
 		@SuppressWarnings("rawtypes")
     Map session = ActionContext.getContext().getSession();
-		session.remove("logined");
-		session.remove("logined");
 		session.remove("loginId");
 		session.remove("username");
 		session.remove("image");
